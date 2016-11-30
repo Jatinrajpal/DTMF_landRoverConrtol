@@ -1,0 +1,38 @@
+/*First define input pins for DTMF decoder output as in Input for arduino and output pins for motors.*/
+#define m11 3
+#define m12 4
+#define m21 5
+#define m22 6
+
+#define D0 19
+#define D1 18
+#define D2 17
+#define D3 16
+
+/*set DTMF decoder output pins as input and motor pin as output.*/
+
+void setup()
+{
+  pinMode(D0, INPUT);
+  pinMode(D1, INPUT);
+  pinMode(D2, INPUT);
+  pinMode(D3, INPUT);
+  pinMode(m11, OUTPUT);
+  pinMode(m12, OUTPUT);
+  pinMode(m21, OUTPUT);
+  pinMode(m22, OUTPUT);
+
+}
+
+/*obtain dtmf decoder output and compare with defined values by using if statement and do appropriate operation.*/
+
+int temp1 = digitalRead(D0);
+int temp2 = digitalRead(D1);
+int temp3 = digitalRead(D2);
+int temp4 = digitalRead(D3);
+
+if(temp1==0 && temp2==1 && temp3==0 && temp4==0){
+forward();
+}
+
+/*so on define all the other movements namely stop, right, left, backward*/
