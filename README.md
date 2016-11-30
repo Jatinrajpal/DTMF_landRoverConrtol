@@ -1,0 +1,2 @@
+# DTMF_landRoverConrtol
+The objective of this project is to control a land rover by mobile phone using Dual Tone Multiple Frequency technology. The bot is controlled by a mobile phone which makes a call to the mobile phone attached to the bot. In the course of the call, if any button is pressed the corresponding sound is heard at the receiving end. The frequency of the received sound is processed by the  arduino and decoded by the decoder. This decoded output then moves the bot is the  appropriate direction.
